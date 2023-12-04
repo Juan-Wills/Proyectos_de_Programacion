@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Articulo_a_pagar {
+public class TrabajoAlgoritmia_Final {                  //Sistema de pago de un producto
     public static void main(String args[]){
         try (Scanner sc = new Scanner(System.in)) {
             int precio=50000;
@@ -43,8 +43,6 @@ public class Articulo_a_pagar {
                 break;
             case 2:
             int nuevo_valor1=(valor_total)-(int)(valor_total*0.15);
-            System.out.println("Ingrese su numero de cuenta bancaria: ");
-            int cuenta_bancaria=sc.nextInt();
             System.out.println("Ingrese el valor a cancelar: ");
             int dinero_pagar1= sc.nextInt();
             if (dinero_pagar1<nuevo_valor1){ 
