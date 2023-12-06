@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class TrabajoAlgoritmia_2 {
+public class TrabajoAlgoritmia_1 {
     public static void main(String[] args) {
         try (Scanner sc= new Scanner(System.in)){
             int precio= 50000;
