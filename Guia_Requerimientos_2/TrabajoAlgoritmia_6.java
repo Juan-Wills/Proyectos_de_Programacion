@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TrabajoAlgoritmia_Final {                  
+public class TrabajoAlgoritmia_6 {                  
     public static void main(String args[]) {
         try (Scanner sc = new Scanner(System.in)) {
             int precio= 10000;
