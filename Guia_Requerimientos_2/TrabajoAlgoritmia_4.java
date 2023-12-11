@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TrabajoAlgoritmia_3 {
+public class TrabajoAlgoritmia_4 {
     public static void main(String[] args) {
         try (Scanner sc= new Scanner(System.in)){
             double dormir= 1.08;
