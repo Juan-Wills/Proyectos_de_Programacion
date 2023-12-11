@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrabajoAlgoritmia_4 {
@@ -5,34 +6,33 @@ public class TrabajoAlgoritmia_4 {
         try (Scanner sc= new Scanner(System.in)){
             double dormir= 1.08;
             double sentado= 1.66;
-            int peso_Kg= 70;
-            System.out.println("Tiempo registrado (en minutos)");
-              int tiempo= sc.next.Int();
+            DecimalFormat df= new DecimalFormat("#.000");
+
+            System.out.print("Tiempo registrado (en minutos): ");
+              int tiempo= sc.nextInt();
             System.out.println("Actividad fisica");
             System.out.println("1. Dormir       2. Sentado      3. Ambos");
               int opcion= sc.nextInt();
           
             switch(opcion){
               case 1:
-                double calorias= (int)(dormir*tiempo);
-                int peso_rebajado= peso-calorias;
-                System.out.println("Ha quemado un total de " + peso_rebajado + " Kg");
+                double calorias_d= tiempo*dormir;
+                double peso_rebajado_d= calorias_d/7700;
+                System.out.println("Ha quemado un total de " + df.format(peso_rebajado_d) + " Kg.");
                 break;
                 
               case 2:
-                double calorias= (int)(sentado*tiempo);
-                int peso_rebajado= sentado-tiempo;
-                System.out.println("Ha quemado un total de " + peso_rebajado + " Kg");
+                double calorias_s= sentado*tiempo;
+                double peso_rebajado_s= calorias_s/7700;
+                System.out.println("Ha quemado un total de " + df.format(peso_rebajado_s) + " Kg.");
                 break;
                 
               case 3:
-                double calorias_sentado= (int)(sentado*tiempo);
-                double calorias_dormir= (int)(dormir*tiempo);
-                int peso_rebajado_sentado= sentado-tiempo;
-                int peso_rebajado_dormir= dormir-tiempo;
-                int total_calorias= peso_rebajado_sentado+peso_rebajado_dormir;
-                int peso_rebajado_total= peso-total_calorias;
-                System.out.println("Ha quemado un total de " + peso_rebajado_total + " Kg");
+                double calorias_sentado= sentado*tiempo;
+                double calorias_dormir= dormir*tiempo;
+                double suma_calorias= calorias_sentado+calorias_dormir;
+                double total_calorias= suma_calorias/7700;
+                System.out.println("Ha quemado un total de " + df.format(total_calorias) + " Kg.");
                 break;
                 
               default:

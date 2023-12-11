@@ -16,15 +16,15 @@ public class TrabajoAlgoritmia_5 {
           
             switch(opcion){
               case 1:
-                int descuento_aplicado= (int)(precio-descuento_10);
+                int descuento_aplicado_10= (int)(precio-descuento_10);
                 System.out.println("Articulo: " + articulo);
-                System.out.println("Precio (descuento 10%): " + descuento_aplicado);
+                System.out.println("Precio (descuento 10%): " + descuento_aplicado_10);
                 break;
                 
               case 2:
-                int descuento_aplicado= (int)(precio-descuento_20);
+                int descuento_aplicado_20= (int)(precio-descuento_20);
                 System.out.println("Articulo: " + articulo);
-                System.out.println("Precio (descuento 20%): " + descuento_aplicado);
+                System.out.println("Precio (descuento 20%): " + descuento_aplicado_20);
                 break;
               
               default:

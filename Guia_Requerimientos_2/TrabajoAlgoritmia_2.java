@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrabajoAlgoritmia_2 {
@@ -9,11 +10,12 @@ public class TrabajoAlgoritmia_2 {
                double nota2= sc.nextDouble();
               System.out.print("Digite su tercera nota: ");
                double nota3= sc.nextDouble();
-               double promedio= (nota1*nota2*nota3)/3 ;
+               double promedio= (nota1+nota2+nota3)/3 ;
+               DecimalFormat df = new DecimalFormat("#.0");
             if (promedio>=3.5) {                                                    
-                System.out.println("Su promedio es de " + promedio + ". Por lo que ha aprobado");
+                System.out.println("Su promedio es de " + df.format(promedio) + ". Por lo que ha aprobado");
             } else{
-                System.out.println("Su promedio es de " + promedio + ". Por lo que ha reprobado"); 
+                System.out.println("Su promedio es de " + df.format(promedio) + ". Por lo que ha reprobado"); 
             }
         }
     }
