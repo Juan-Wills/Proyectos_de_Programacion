@@ -7,7 +7,7 @@ public class TrabajoAlgoritmia_6 {       //Incremento salarial del 8%
             int salario= sc.nextInt();
             double aumento= salario*0.08;
             int aumento_salario= (int)(aumento+salario);
-            System.out.println("\nSe ha hecho un aumento del 8% a su salario, por lo que su nuevo salario ahora es de "+ aumento_salario +" pesos.");
+            System.out.println("\nSe ha realizado un aumento del 8% a su salario, por lo que su nuevo salario ahora es de "+ aumento_salario +" pesos.");
         }
     }
 }

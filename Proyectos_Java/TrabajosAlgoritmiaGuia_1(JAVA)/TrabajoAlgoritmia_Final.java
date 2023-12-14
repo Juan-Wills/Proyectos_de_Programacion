@@ -20,7 +20,7 @@ public class TrabajoAlgoritmia_Final {                  //Sistema de pago de un 
             int nuevo_valor= (valor_total)-(int)(valor_total*0.15);                                                                                                        //Descuento aplicado
             System.out.println("\nSe acaba de aplicar un descuento del 15% a su compra,\npor lo que el valor total de su compra ahora es de " + nuevo_valor + " pesos.");
             } else if(habitual.equalsIgnoreCase(Op2)) {                                                                                                                    //Descuento no-aplicado
-                System.out.println("\nNo se aplica descuento. Por lo tanto, el valor de su compra sigue en "+ valor_total + " pesos.");
+                System.out.println("\nNo se aplica descuento. Por lo tanto, el valor de su compra sigue siendo "+ valor_total + " pesos.");
             }else{
                 System.out.print("\nError de digitacion, por favor vuelva a intentarlo.");                                                                              //Default
             }
