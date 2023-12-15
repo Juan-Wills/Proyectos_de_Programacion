@@ -7,7 +7,7 @@ Algoritmo TrabajoAlgoritmia_8
 	Escribir "1.2000000     	2.1500000     3.Ninguno de los 2";
 	Leer desicion;
 	
-	Si (desicion=1) O (desicion=2000000) Entonces
+	Si (desicion=1 O desicion=2000000) Entonces
 	Escribir "Cantidad de ventas: ";
 	Leer ventasP1;
 	valor_ventasP1<-ventasP1*precio1;
@@ -22,7 +22,7 @@ Algoritmo TrabajoAlgoritmia_8
 	FinSi
 	FinSi
 	
-	Si (desicion=2) O (desicion=1500000) Entonces
+	Si (desicion=2 O desicion=1500000) Entonces
 	Escribir "Cantidad de ventas: ";
 	Leer ventasP2;
 	valor_ventasP2<-ventasP2*precio2;
@@ -37,8 +37,13 @@ Algoritmo TrabajoAlgoritmia_8
 	FinSi
 	FinSi
 	
-	Si (desicion=3)Entonces
+	Si desicion=3 Entonces
 		Escribir "No se aplica comision";
 	SiNo
 	FinSi
+	
+	Si (desicion<>1 Y desicion<>2 Y desicion<>3) Entonces
+		Escribir "Error de digitacion, por favor intentelo de nuevo.";
+	SiNo
+	Fin Si
 FinAlgoritmo
