@@ -4,7 +4,7 @@ Algoritmo ejercicio_2_vectores
 	Dimension temp_max[4]
 	Dimension cont[5]
 	Dimension aux[2]
-	Para i<-0 Hasta 1 Con Paso 1 Hacer
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
 		contador=contador+1
 		cont[i]=contador
 		Escribir "Dia ", contador
