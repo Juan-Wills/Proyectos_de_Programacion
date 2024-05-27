@@ -23,17 +23,13 @@ Algoritmo ejercicio_prueba_2
 			Fin Para
 			cont=0
 		Fin Para
-	Fin Para
-	Para f<-0 Hasta 0 Con Paso 1 Hacer
-		Para c<-0 Hasta alumnos_var-1 Con Paso 1 Hacer
-			Escribir "Nombre del alumno: ",alumnos[f,c]
-			Escribir "Numero de documento del alumno: ",documentos[f,c]
-			Para f<-0 Hasta alumnos_var-1 Con Paso 1 Hacer
-				Para c<-0 Hasta 0 Con Paso 1 Hacer
-					cont=cont+1
-					Escribir "Nota ",cont," del alumno ", notas[f,c]
-				Fin Para
+		Para f<-0 Hasta 0 Con Paso 1 Hacer
+			Para c<-0 Hasta alumnos_var-1 Con Paso 1 Hacer
+				Escribir "Nombre del alumno: ",alumnos[f,c]
+				Escribir "Numero de documento del alumno: ",documentos[f,c]
+				cont=cont+1
+				Escribir "Nota ",cont," del alumno ", notas[f,c]
 			Fin Para
-		Fin Para
-	FinPara
+		FinPara
+	Fin Para
 FinAlgoritmo
