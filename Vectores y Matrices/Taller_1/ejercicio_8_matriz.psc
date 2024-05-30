@@ -27,7 +27,7 @@ Algoritmo ejercicio_8_matriz
 			Leer tipo_producto[f,c]
 			Escribir " Nombre del producto"
 			Leer nom_producto[f,c]
-			Escribir " Cantidad"
+			Escribir " Cantidad (unidades)"
 			Leer cantidad[f,c]
 			Escribir " Valor unitario"
 			Leer valor_unitario[f,c]
@@ -36,11 +36,9 @@ Algoritmo ejercicio_8_matriz
 			Escribir "PAGO:"
 			Escribir " Valor a pagar: $", valor_total[f,c]
 			Escribir " Recibe: "
-			Leer dinero_entrante
-			cambio=dinero_entrante-valor_total[f,c]
+			Leer ingresos[f,c]
+			cambio=ingresos[f,c]-valor_total[f,c]
 			Escribir "Cambio: ", cambio
-			ingresos[f,c]=ingresos[f,c]+(dinero_entrante-cambio)
-			Escribir ingresos[f,c]
 			dinero_entrante=0
 			cambio=0
 			Si c=clientes-1 Entonces
@@ -71,9 +69,13 @@ Algoritmo ejercicio_8_matriz
 							Escribir "   Nombre del producto: ",nom_producto[f,c]
 							Escribir "   Cantidad de producto ",cantidad[f,c]
 							Escribir "   Cantidad de dinero que ingreso : ",ingresos[f,c]
-							Escribir ""
+							Escribir ""	
+							dato_ingreso=ingresos[f,c]
+							ingreso_total=ingreso_total+dato_ingreso
 						Fin Para
 					Fin Para
+					Escribir ""
+					Escribir "Ingresos totales: $",ingreso_total
 				SiNo
 				Fin Si
 			SiNo

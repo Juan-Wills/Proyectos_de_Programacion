@@ -1,5 +1,5 @@
 Algoritmo ejercicio_10_matrices
-	clientes=3
+	clientes=5
 	Dimension cal_atencion_empleados[clientes,clientes]
 	Dimension cal_calidad_comida[clientes,clientes]
 	Dimension cal_precio_justo[clientes,clientes]
