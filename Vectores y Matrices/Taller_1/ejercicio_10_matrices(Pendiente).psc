@@ -1,154 +1,58 @@
 Algoritmo ejercicio_10_matrices
 	clientes=5
-	Dimension cal_atencion_empleados[clientes,clientes]
-	Dimension cal_calidad_comida[clientes,clientes]
-	Dimension cal_precio_justo[clientes,clientes]
-	Dimension cal_ambiente[clientes,clientes]
-	Dimension promedio[clientes,clientes]
+	Dimension cal_atencion_empleados[clientes]
+	Dimension cal_calidad_comida[clientes]
+	Dimension cal_precio_justo[clientes]
+	Dimension cal_ambiente[clientes]
+	Dimension promedio[clientes]
 	Para f=0 Hasta clientes-1 Con Paso 1 Hacer 
-		Para c=0 Hasta 0 Con Paso 1 hacer
-			Escribir "Como fue la atencion de los empleados?"
-			Escribir "         1   2   3   4   5"
-			Escribir "Muy mala                   Muy buena "
-			Leer cal_atencion_empleados[f,c]
-			Escribir ""
-			Escribir "Como la calidad del menú?"
-			Escribir "         1   2   3   4   5"
-			Escribir "Muy mala                   Muy buena "
-			Leer cal_calidad_comida[f,c]
-			Escribir ""
-			Escribir "Como fue el precio de las comidas?"
-			Escribir "         1   2   3   4   5"
-			Escribir "Muy mala                   Muy buena "
-			Leer cal_precio_justo[f,c]
-			Escribir ""
-			Escribir "Como estuvo el ambiente en general?"
-			Escribir "(Comodidad, Musica, Iluminacion, Decoracion)"
-			Escribir "         1   2   3   4   5"
-			Escribir "Muy mala                   Muy buena "
-			Leer cal_ambiente[f,c]
-			Escribir ""
-			Si f=clientes-1 Entonces
-				Escribir ""
-				Escribir "CALIFICACION DEL CLIENTE 1"
-				Escribir ""
-				Escribir "   Atencion al cliente: "
-				Si cal_atencion_empleados[f,c]=1 Entonces
-					calificacion="Muy mala"
-				SiNo
-					Si cal_atencion_empleados[f,c]=2 Entonces
-						calificacion="Mala"
-					SiNo
-						Si cal_atencion_empleados[f,c]=3 Entonces
-							calificacion="Aceptable"
-						SiNo
-							Si cal_atencion_empleados[f,c]=4 Entonces
-								calificacion="Bueno"
-							SiNo
-								Si cal_atencion_empleados[f,c]=5 Entonces
-									calificacion="Muy bueno"
-								SiNo
-									Escribir "Error, el valor ingresado no es valido"
-								Fin Si
-							Fin Si
-						Fin Si
-					Fin Si
-				Fin Si
-				Escribir ""
-				Escribir "   Calidad de la comida: "
-				Si cal_calidad_comida[f,c]=1 Entonces
-					calificacion="Muy mala"
-				SiNo
-					Si cal_calidad_comida[f,c]=2 Entonces
-						calificacion="Mala"
-					SiNo
-						Si cal_calidad_comida[f,c]=3 Entonces
-							calificacion="Aceptable"
-						SiNo
-							Si cal_calidad_comida[f,c]=4 Entonces
-								calificacion="Bueno"
-							SiNo
-								Si cal_calidad_comida[f,c]=5 Entonces
-									calificacion="Muy bueno"
-								SiNo
-									Escribir "Error, el valor ingresado no es valido"
-								Fin Si
-							Fin Si
-						Fin Si
-					Fin Si
-				Fin Si
-				Escribir ""
-				Escribir "   Precio de la comida: "
-				Si cal_precio_justo[f,c]=1 Entonces
-					calificacion="Muy mala"
-				SiNo
-					Si cal_precio_justo[f,c]=2 Entonces
-						calificacion="Mala"
-					SiNo
-						Si cal_precio_justo[f,c]=3 Entonces
-							calificacion="Aceptable"
-						SiNo
-							Si cal_precio_justo[f,c]=4 Entonces
-								calificacion="Bueno"
-							SiNo
-								Si cal_precio_justo[f,c]=5 Entonces
-									calificacion="Muy bueno"
-								SiNo
-									Escribir "Error, el valor ingresado no es valido"
-								Fin Si
-							Fin Si
-						Fin Si
-					Fin Si
-				Fin Si
-				Escribir ""
-				Escribir "   Ambiente general: "
-				Si cal_ambiente[f,c]=1 Entonces
-					calificacion="Muy mala"
-				SiNo
-					Si cal_ambiente[f,c]=2 Entonces
-						calificacion="Mala"
-					SiNo
-						Si cal_ambiente[f,c]=3 Entonces
-							calificacion="Aceptable"
-						SiNo
-							Si cal_ambiente[f,c]=4 Entonces
-								calificacion="Bueno"
-							SiNo
-								Si cal_ambiente[f,c]=5 Entonces
-									calificacion="Muy bueno"
-								SiNo
-									Escribir "Error, el valor ingresado no es valido"
-								Fin Si
-							Fin Si
-						Fin Si
-					Fin Si
-				Fin Si
-				Escribir ""
-				promedio[f,c]=redon((cal_atencion_empleados[f,c]+cal_calidad_comida[f,c]+cal_precio_justo[f,c]+cal_ambiente[f,c])/4)
-				Escribir "   Califacacion general: "
-				Si promedio[f,c]=1 Entonces
-					calificacion="Muy mala"
-				SiNo
-					Si promedio[f,c]=2 Entonces
-						calificacion="Mala"
-					SiNo
-						Si promedio[f,c]=3 Entonces
-							calificacion="Aceptable"
-						SiNo
-							Si promedio[f,c]=4 Entonces
-								calificacion="Bueno"
-							SiNo
-								Si promedio[f,c]=5 Entonces
-									calificacion="Muy bueno"
-								SiNo
-									Escribir "Error, el valor ingresado no es valido"
-								Fin Si
-							Fin Si
-						Fin Si
-					Fin Si
-				Fin Si
-			SiNo
-			Fin Si
+		Escribir "Como fue la atencion de los empleados?"
+		Escribir "         1   2   3   4   5"
+		Escribir "Muy mala                   Muy buena "
+		Leer cal_atencion_empleados[i]
+		Si cal_atencion_empleados[i]>5 O cal_atencion_empleados[i]<1 Entonces
+			Escribir "Valor ingresado fuera de rango. Por favor, abstengace de continuar e intentelo ingresando un numero entre el 1 y el 5."
+		Fin Si
+		Escribir ""
+		Escribir "Como la calidad del menú?"
+		Escribir "         1   2   3   4   5"
+		Escribir "Muy mala                   Muy buena "
+		Leer cal_calidad_comida[i]
+		Si cal_calidad_comida[i]>5 O cal_calidad_comida[i]<1 Entonces
+			Escribir "Valor ingresado fuera de rango. Por favor, abstengace de continuar e intentelo ingresando un numero entre el 1 y el 5."
+		Fin Si
+		Escribir ""
+		Escribir "Como fue el precio de las comidas?"
+		Escribir "         1   2   3   4   5"
+		Escribir "Muy mala                   Muy buena "
+		Leer cal_precio_justo[i]
+		Si cal_precio_justo[i]>5 O cal_precio_justo[i]<1 Entonces
+			Escribir "Valor ingresado fuera de rango. Por favor, abstengace de continuar e intentelo ingresando un numero entre el 1 y el 5."
+		Fin Si
+		Escribir ""
+		Escribir "Como estuvo el ambiente en general?"
+		Escribir "(Comodidad, Musica, Iluminacion, Decoracion)"
+		Escribir "         1   2   3   4   5"
+		Escribir "Muy mala                   Muy buena "
+		Leer cal_ambiente[i]
+		Si cal_ambiente[i]>5 O cal_ambiente[i]<1 Entonces
+			Escribir "Valor ingresado fuera de rango. Por favor, abstengace de continuar e intentelo ingresando un numero entre el 1 y el 5."
+		Fin Si
+		Escribir ""
+		promedio[i]= (cal_atencion_empleados[i]+cal_calidad_comida[i]+cal_precio_justo[i]+cal_ambiente[i])/4
+	FinPara
+	M=1
+	n=5
+	Para i=clientes-1 Hasta 1 Con Paso 1 Hacer
+		Para j=0 Hasta i-1 Con Paso 1 Hacer
+		//Ordenamiento por burbuja
+		Si cal_atencion_empleados[0] Entonces
+			cal
+		SiNo
+		Fin Si
+		Escribir "CALIFICACION CLIENTE ",i+1
+		
+		Escribir "PROMEDIO DE CALIFICACION: ",promedio[i];
 		FinPara
 	FinPara
 FinAlgoritmo
