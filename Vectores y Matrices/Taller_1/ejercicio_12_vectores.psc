@@ -1,4 +1,4 @@
-Algoritmo ejercicio_12_vectores
+Algoritmo ejercicio_12_vectores_TiendaComputadores
 	Escribir "Cantidad de computadores en stock"
 	Leer stock
 	Dimension nombre_equipo[stock]
