@@ -1,4 +1,4 @@
-Algoritmo ejercicio_9_matrices
+Algoritmo ejercicio_9_matrices_Futbol
 	Escribir "Cantidad de jugadores"
 	Leer jugadores
 	Dimension nombre[jugadores,jugadores]

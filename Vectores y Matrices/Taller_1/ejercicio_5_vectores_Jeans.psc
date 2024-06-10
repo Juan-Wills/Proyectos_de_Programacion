@@ -1,4 +1,4 @@
-Algoritmo ejercicio_5_vectores
+Algoritmo ejercicio_5_vectores_Jeans
 	Dimension marca[9]
 	Para i<-0 Hasta 8 Con Paso 1 Hacer
 		Escribir "Escriba la marca del jean: "

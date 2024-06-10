@@ -1,5 +1,5 @@
 Algoritmo ejercicio_12_vectores_TiendaComputadores
-	Escribir "Cantidad de computadores en stock"
+	Escribir "stock"
 	Leer stock
 	Dimension nombre_equipo[stock]
 	Dimension cant_unidades[stock]
@@ -14,7 +14,7 @@ Algoritmo ejercicio_12_vectores_TiendaComputadores
 		Leer cant_unidades[i]
 		cant_maxima=cant_maxima+cant_unidades[i]
 		Si cant_maxima>stock Entonces
-			Escribir "Se ha sobrepasado la cantidad maxima de equipos en stock. Por favor, revise el numero digitado anteriosmente"
+			Escribir "Se ha sobrepasado la cantidad maxima de equipos en stock. Por favor, revise el numero digitado anteriormente"
 			Escribir "Cantidad de equipos en stock: ",stock
 			Escribir "Cantidad de equipos ingresados: ",cant_maxima
 		Fin Si
@@ -38,8 +38,6 @@ Algoritmo ejercicio_12_vectores_TiendaComputadores
 			i=stock-1
 		Fin Si
 	Fin Para
-	costo_total=costo_total
-	precio_total=precio_total
 	Escribir "Perdida total por la inversion de todos los productos: $",costo_total
 	Escribir "Ganacia total por la venta de todos los productos: $",precio_total
 FinAlgoritmo
